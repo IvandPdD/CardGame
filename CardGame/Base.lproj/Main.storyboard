@@ -35,9 +35,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="9sg-8F-qxH"/>
-                                            <constraint firstAttribute="width" constant="120" id="ObM-L5-FjY"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="ObM-L5-FjY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <size key="titleShadowOffset" width="25" height="25"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="cardSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wu8-9J-a3V"/>
@@ -47,7 +48,7 @@
                                         <rect key="frame" x="251" y="0.0" width="120" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="8fc-9B-qaa"/>
-                                            <constraint firstAttribute="width" constant="120" id="LIv-eq-e78"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="LIv-eq-e78"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Button"/>
@@ -91,10 +92,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41b-Ep-Il8">
-                                <rect key="frame" x="100" y="623" width="223" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="41b-Ep-Il8">
+                                <rect key="frame" x="95.5" y="623" width="223" height="94"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="1cQ-eQ-gGI"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="94" id="UK3-Su-MtV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="223" id="mzD-x8-Xtm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Play again">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
@@ -103,19 +108,33 @@
                                     <action selector="playAgainWithSender:" destination="SBE-LR-But" eventType="touchUpInside" id="52Q-GY-PU4"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WinImage" translatesAutoresizingMaskIntoConstraints="NO" id="vZZ-6m-2Do">
-                                <rect key="frame" x="91" y="236" width="240" height="232"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="WinImage" translatesAutoresizingMaskIntoConstraints="NO" id="vZZ-6m-2Do">
+                                <rect key="frame" x="81" y="190" width="252" height="252"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vZZ-6m-2Do" secondAttribute="height" multiplier="2:2" id="uNA-2z-3Qv"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HWY-P7-h25"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="41b-Ep-Il8" firstAttribute="centerX" secondItem="oz9-Km-ptG" secondAttribute="centerX" id="Gcv-x9-92d"/>
+                            <constraint firstItem="vZZ-6m-2Do" firstAttribute="centerX" secondItem="41b-Ep-Il8" secondAttribute="centerX" id="Ia3-fV-ftH"/>
+                            <constraint firstItem="HWY-P7-h25" firstAttribute="bottom" secondItem="41b-Ep-Il8" secondAttribute="bottom" constant="145" id="Ijf-zV-olT"/>
+                            <constraint firstItem="vZZ-6m-2Do" firstAttribute="leading" secondItem="HWY-P7-h25" secondAttribute="leading" constant="81" id="aOG-it-yqr"/>
+                            <constraint firstItem="41b-Ep-Il8" firstAttribute="centerX" secondItem="oz9-Km-ptG" secondAttribute="centerX" id="tYN-k3-X1v"/>
+                            <constraint firstItem="vZZ-6m-2Do" firstAttribute="top" secondItem="HWY-P7-h25" secondAttribute="top" constant="146" id="u8n-6z-a8j"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Ev-M9-r5q"/>
+                    <connections>
+                        <segue destination="ac5-iG-KTS" kind="unwind" identifier="PlayAgainWinSegue" unwindAction="unwindToViewControllerWithSegue:" id="t2G-Bo-7Jj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fqz-dV-pnE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ac5-iG-KTS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1319" y="-479"/>
+            <point key="canvasLocation" x="1317.3913043478262" y="-480.13392857142856"/>
         </scene>
         <!--Lose View Controller-->
         <scene sceneID="4Y8-OX-uWC">
@@ -125,10 +144,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4a7-6g-gIK">
-                                <rect key="frame" x="100" y="623" width="223" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4a7-6g-gIK">
+                                <rect key="frame" x="95.5" y="623" width="223" height="94"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="223" id="jHq-4S-CJb"/>
+                                    <constraint firstAttribute="height" constant="94" id="tu3-py-3uN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Play again">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
@@ -137,23 +159,32 @@
                                     <action selector="playAgainWithSender:" destination="4M8-hr-aVm" eventType="touchUpInside" id="ZCZ-ov-43v"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LoseImage" translatesAutoresizingMaskIntoConstraints="NO" id="tA7-R7-cLB">
-                                <rect key="frame" x="91" y="236" width="240" height="232"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoseImage" translatesAutoresizingMaskIntoConstraints="NO" id="tA7-R7-cLB">
+                                <rect key="frame" x="54" y="157" width="306" height="306"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tA7-R7-cLB" secondAttribute="height" multiplier="2:2" id="vmB-0V-zFf"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5N6-tk-Vw9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tA7-R7-cLB" firstAttribute="centerX" secondItem="OQ4-KX-qQk" secondAttribute="centerX" id="8ze-e1-9hm"/>
+                            <constraint firstItem="tA7-R7-cLB" firstAttribute="leading" secondItem="5N6-tk-Vw9" secondAttribute="leading" constant="54" id="R8t-P9-L6t"/>
+                            <constraint firstItem="4a7-6g-gIK" firstAttribute="centerX" secondItem="OQ4-KX-qQk" secondAttribute="centerX" id="RTX-hV-0qu"/>
+                            <constraint firstItem="tA7-R7-cLB" firstAttribute="top" secondItem="5N6-tk-Vw9" secondAttribute="top" constant="113" id="VQg-Gg-oI1"/>
+                            <constraint firstItem="5N6-tk-Vw9" firstAttribute="bottom" secondItem="4a7-6g-gIK" secondAttribute="bottom" constant="145" id="mOg-nM-yOG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ETh-ko-En3"/>
                     <connections>
-                        <segue destination="wvK-vq-Ra0" kind="unwind" identifier="PlayAgainSegue" unwindAction="unwindToViewControllerWithSegue:" id="Hey-xD-CD4"/>
+                        <segue destination="wvK-vq-Ra0" kind="unwind" identifier="PlayAgainLoseSegue" unwindAction="unwindToViewControllerWithSegue:" id="Hey-xD-CD4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUe-Ew-NVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wvK-vq-Ra0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1319" y="283"/>
+            <point key="canvasLocation" x="1318.840579710145" y="282.58928571428572"/>
         </scene>
     </scenes>
     <resources>

@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     @IBAction func unwindToViewController(segue: UIStoryboardSegue) {
         DispatchQueue.global(qos: .userInitiated).async {
             DispatchQueue.main.async {
-                self.viewDidAppear(true)
+                self.initialSet()
             }
         }
     }

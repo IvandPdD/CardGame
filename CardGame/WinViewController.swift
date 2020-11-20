@@ -14,6 +14,6 @@ class WinViewController: UIViewController {
     }
     
     @IBAction func playAgain(sender: UIButton!){
-        dismiss(animated: true, completion: nil)
+        self.performSegue(withIdentifier: "PlayAgainWinSegue", sender: self)
     }
 }

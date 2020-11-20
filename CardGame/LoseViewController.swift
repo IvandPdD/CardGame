@@ -14,7 +14,6 @@ class LoseViewController: UIViewController {
     }
     
     @IBAction func playAgain(sender: UIButton!){
-        dismiss(animated: true, completion: nil)
-        self.performSegue(withIdentifier: "PlayAgainSegue", sender: self)
+        self.performSegue(withIdentifier: "PlayAgainLoseSegue", sender: self)
     }
 }
