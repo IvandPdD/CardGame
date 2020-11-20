@@ -13,6 +13,8 @@
 		2F40E0E725670C31008B88BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F40E0E525670C31008B88BF /* Main.storyboard */; };
 		2F40E0E925670C33008B88BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F40E0E825670C33008B88BF /* Assets.xcassets */; };
 		2F40E0EC25670C33008B88BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F40E0EA25670C33008B88BF /* LaunchScreen.storyboard */; };
+		2F40E0F92567407E008B88BF /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F40E0F82567407E008B88BF /* WinViewController.swift */; };
+		2F40E0FC25674703008B88BF /* LoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F40E0FB25674703008B88BF /* LoseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2F40E0E825670C33008B88BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F40E0EB25670C33008B88BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F40E0ED25670C33008B88BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F40E0F82567407E008B88BF /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
+		2F40E0FB25674703008B88BF /* LoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				2F40E0E125670C31008B88BF /* SceneDelegate.swift */,
 				2F40E0E325670C31008B88BF /* ViewController.swift */,
 				2F40E0E525670C31008B88BF /* Main.storyboard */,
+				2F40E0F82567407E008B88BF /* WinViewController.swift */,
+				2F40E0FB25674703008B88BF /* LoseViewController.swift */,
 				2F40E0E825670C33008B88BF /* Assets.xcassets */,
 				2F40E0EA25670C33008B88BF /* LaunchScreen.storyboard */,
 				2F40E0ED25670C33008B88BF /* Info.plist */,
@@ -140,6 +146,8 @@
 				2F40E0E425670C31008B88BF /* ViewController.swift in Sources */,
 				2F40E0E025670C31008B88BF /* AppDelegate.swift in Sources */,
 				2F40E0E225670C31008B88BF /* SceneDelegate.swift in Sources */,
+				2F40E0FC25674703008B88BF /* LoseViewController.swift in Sources */,
+				2F40E0F92567407E008B88BF /* WinViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
