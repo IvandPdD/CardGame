@@ -16,9 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mantén el número entre 0 y 21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXQ-pb-Qcq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mantén el número entre 0 y 21" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXQ-pb-Qcq">
                                 <rect key="frame" x="13" y="144" width="388" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -28,41 +28,47 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="131" translatesAutoresizingMaskIntoConstraints="NO" id="xFc-ec-cT5">
-                                <rect key="frame" x="21.5" y="348" width="371" height="200"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="131" translatesAutoresizingMaskIntoConstraints="NO" id="xFc-ec-cT5">
+                                <rect key="frame" x="10" y="348" width="394" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cG-Nf-JlA">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="9sg-8F-qxH"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="ObM-L5-FjY"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="-40" maxX="0.0" maxY="0.0"/>
                                         <size key="titleShadowOffset" width="25" height="25"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Button" backgroundImage="CardImage"/>
                                         <connections>
                                             <action selector="cardSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wu8-9J-a3V"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Und-SA-DZY">
-                                        <rect key="frame" x="251" y="0.0" width="120" height="200"/>
+                                        <rect key="frame" x="262.5" y="0.0" width="131.5" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="8fc-9B-qaa"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="LIv-eq-e78"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="-40" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Button" backgroundImage="CardImage"/>
                                         <connections>
                                             <action selector="cardSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yK2-Xt-9ln"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xFc-ec-cT5" secondAttribute="height" multiplier="197:100" id="TUF-Cg-yae"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sXQ-pb-Qcq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="AAh-uf-3E9"/>
+                            <constraint firstItem="xFc-ec-cT5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="M9W-zh-fGn"/>
                             <constraint firstItem="xFc-ec-cT5" firstAttribute="top" secondItem="sXQ-pb-Qcq" secondAttribute="bottom" constant="168" id="Rmb-Cp-EIs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mWl-qt-GaH" secondAttribute="bottom" constant="100" id="Rq2-My-oQv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mWl-qt-GaH" secondAttribute="trailing" id="TBe-2x-jTH"/>
@@ -70,6 +76,7 @@
                             <constraint firstItem="mWl-qt-GaH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="piy-xw-HhY"/>
                             <constraint firstItem="sXQ-pb-Qcq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v6b-Ub-xrg"/>
                             <constraint firstItem="mWl-qt-GaH" firstAttribute="top" secondItem="xFc-ec-cT5" secondAttribute="bottom" constant="172" id="vfj-MN-xvi"/>
+                            <constraint firstAttribute="trailing" secondItem="xFc-ec-cT5" secondAttribute="trailing" constant="10" id="zSb-g7-jDY"/>
                         </constraints>
                     </view>
                     <connections>
@@ -134,7 +141,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fqz-dV-pnE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ac5-iG-KTS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1317.3913043478262" y="-480.13392857142856"/>
+            <point key="canvasLocation" x="1316" y="-437"/>
         </scene>
         <!--Lose View Controller-->
         <scene sceneID="4Y8-OX-uWC">
@@ -184,10 +191,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUe-Ew-NVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wvK-vq-Ra0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1318.840579710145" y="282.58928571428572"/>
+            <point key="canvasLocation" x="1317" y="234"/>
         </scene>
     </scenes>
     <resources>
+        <image name="CardImage" width="515" height="750"/>
         <image name="LoseImage" width="169" height="169"/>
         <image name="WinImage" width="500" height="483.5"/>
         <systemColor name="secondarySystemBackgroundColor">
